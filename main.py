@@ -53,7 +53,6 @@ if file is not None:
             my_bar.progress(50, text = "Generating charts")
 
         except Exception as e:
-            st.write(e)
             if "chart_response" in st.session_state:
                 del st.session_state["chart_response"]
             
@@ -74,4 +73,5 @@ if file is not None:
         st.session_state['re-attempt'] = 0
 
 else:
+
     st.info("Upload your CSV to continue.")
